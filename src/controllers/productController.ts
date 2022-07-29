@@ -1,5 +1,5 @@
 import { Request, Response, NextFunction } from 'express';
-import * as productService from '../services/productService';
+import productService from '../services/productService';
 import { IProduct } from '../interfaces/IProduct';
 
 async function create(req: Request, res: Response, next: NextFunction) {

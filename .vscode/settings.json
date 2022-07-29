@@ -3,6 +3,7 @@
     "models",
     "routes",
     "controllers",
-    "interfaces"
+    "interfaces",
+    "services"
   ]
 }
