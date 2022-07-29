@@ -12,6 +12,16 @@ async function create(req: Request, res: Response, next: NextFunction) {
   }
 }
 
+async function getAll(req: Request, res: Response, next: NextFunction) {
+  try {
+    const { status, data } = await productService.getAll();
+    res.status(status).json(data);
+  } catch (error) {
+    next(error);
+  }
+}
+
 export default {
   create,
+  getAll,
 };
