@@ -4,6 +4,7 @@
     "routes",
     "controllers",
     "interfaces",
-    "services"
+    "services",
+    "helpers"
   ]
 }
