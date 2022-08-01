@@ -16,7 +16,7 @@ async function getUserByUserName(userLogin: ILogin) {
   return data;
 }
 
-async function checkUserLogin(userLogin: ILogin) {
+async function checkUserLogin(userLogin: ILogin) { 
   loginValidation(userLogin);
   const data = await getUserByUserName(userLogin);
   
@@ -28,7 +28,7 @@ async function checkUserLogin(userLogin: ILogin) {
   
   const token = tokenHelper.createToken(data);
 
-  return { status: 201, token };
+  return { status: 200, token };
 }
 
 export default {

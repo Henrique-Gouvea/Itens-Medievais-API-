@@ -6,6 +6,7 @@
     "interfaces",
     "services",
     "helpers",
-    "validations"
+    "validations",
+    "middleware"
   ]
 }
