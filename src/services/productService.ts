@@ -1,7 +1,9 @@
 import { IProduct } from '../interfaces/IProduct';
 import productModel from '../models/productModel';
+import cadasterValidation from '../validations/cadasterValidation';
 
 async function create(product: IProduct) {
+  cadasterValidation(product);
   const data = await productModel.create(product);
 
   return { status: 201, data };

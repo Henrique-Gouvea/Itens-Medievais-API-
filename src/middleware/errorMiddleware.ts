@@ -29,8 +29,8 @@ export const errorMiddleware: ErrorRequestHandler = async (err, _req, res, next)
     case 'Unauthorized':
       res.status(401).json({ message });
       break;
-    case 'NotFoundError':
-      res.status(404).json({ message });
+    case 'UnprocessableEntity':
+      res.status(422).json({ message });
       break;
     default:
       console.error(err);
