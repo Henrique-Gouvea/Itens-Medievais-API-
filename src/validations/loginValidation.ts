@@ -11,14 +11,17 @@ const loginValidation = (userLogin: ILogin) => {
       }),
 
     password: Joi
-      .string()
-      .messages({
+      .string().messages({
         'any-required': '"password" is required',
       }),
   });
   const { error } = loginSchema.validate(userLogin);
 
-  if (error) throw error;
+  if (error) {
+    const e = new Error(error.message);
+    e.name = 'BAD_REQUEST';
+    throw e;
+  }
 };
 
 export default loginValidation;

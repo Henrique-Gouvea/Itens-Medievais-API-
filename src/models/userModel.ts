@@ -1,4 +1,5 @@
 import { ResultSetHeader } from 'mysql2';
+import { ILogin } from '../interfaces/ILogin';
 import { IUser } from '../interfaces/IUser';
 import connection from './connection';
 
@@ -17,6 +18,20 @@ async function create(user: IUser): Promise<IUser> {
   return newUser;
 }
 
+async function getUserByUserName(user: ILogin): Promise<ILogin> {
+  const { username, password } = user;
+
+  const query = `SELECT * FROM Trybesmith.Users
+  WHERE username=? AND password=?`;
+
+  const [result] = await connection
+    .execute<ResultSetHeader>(query, [username, password]);
+  
+  const [userReturn] = result as unknown as ILogin[];
+  return userReturn;
+}
+
 export default {
   create,
+  getUserByUserName,
 };

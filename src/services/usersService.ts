@@ -11,15 +11,21 @@ async function create(user: IUser) {
   return { status: 201, token };
 }
 
-async function getUser(userName: ILogin) {
-  const data = await userModel.getUser(userName);
+async function getUserByUserName(userLogin: ILogin) {
+  const data = await userModel.getUserByUserName(userLogin);
   return data;
 }
 
 async function checkUserLogin(userLogin: ILogin) {
   loginValidation(userLogin);
-  const { username, password } = userLogin;
-  const data = await getUser({ username });
+  const data = await getUserByUserName(userLogin);
+  
+  if (!data) {
+    const e = new Error('Username or password invalid');
+    e.name = 'Unauthorized';
+    throw e;
+  }
+  
   const token = tokenHelper.createToken(data);
 
   return { status: 201, token };
