@@ -1,7 +1,7 @@
 import Joi from 'joi';
 import { IProduct } from '../interfaces/IProduct';
 
-const loginSchema = Joi.object({
+const productSchema = Joi.object({
   name: Joi
     .string().min(3).required().messages({
       'string-base': '"name" must be a string',
@@ -17,7 +17,7 @@ const loginSchema = Joi.object({
 });
 
 const cadasterValidation = (user: IProduct) => {
-  const { error } = loginSchema.validate(user);
+  const { error } = productSchema.validate(user);
 
   if (error) {
     const verifyRequired = error.message === '"amount" is required'

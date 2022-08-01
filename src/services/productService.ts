@@ -1,6 +1,6 @@
 import { IProduct } from '../interfaces/IProduct';
 import productModel from '../models/productModel';
-import cadasterValidation from '../validations/cadasterValidation';
+import cadasterValidation from '../validations/cadasterProductValidation';
 
 async function create(product: IProduct) {
   cadasterValidation(product);

@@ -3,8 +3,10 @@ import userModel from '../models/userModel';
 import tokenHelper from '../helpers/token';
 import loginValidation from '../validations/loginValidation';
 import { ILogin } from '../interfaces/ILogin';
+import cadastrerUserValidation from '../validations/cadastrerUserValidation';
 
 async function create(user: IUser) {
+  cadastrerUserValidation(user);
   const data = await userModel.create(user);
   const token = tokenHelper.createToken(data);
 
