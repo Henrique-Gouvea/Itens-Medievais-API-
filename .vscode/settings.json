@@ -5,6 +5,7 @@
     "controllers",
     "interfaces",
     "services",
-    "helpers"
+    "helpers",
+    "validations"
   ]
 }
