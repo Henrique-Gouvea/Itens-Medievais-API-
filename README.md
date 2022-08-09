@@ -28,11 +28,11 @@ Executar o comando npm run dev
 
 ```
 
----
-
 ## 🛠 Tecnologias
 
 As seguintes ferramentas foram usadas na construção do projeto:
+
+#### **Website**  ([React](https://reactjs.org/)
 
 -   **[Express](https://github.com/expressjs/express)**
 -   **[MySQL](https://github.com/mysql)**
@@ -40,4 +40,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   **[JSON-WebToken](https://github.com/auth0/node-jsonwebtoken)**
 -   **[Nodemon](https://github.com/remy/nodemon)**
 
-
+> Veja o arquivo  [package.json](https://github.com/Henrique-Gouvea/Login-and-Registration---back-end-integration-/tree/main/front/package.json)
