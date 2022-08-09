@@ -34,8 +34,6 @@ A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 
 As seguintes ferramentas foram usadas na construção do projeto:
 
-#### **Website**  ([React](https://reactjs.org/)
-
 -   **[Express](https://github.com/expressjs/express)**
 -   **[MySQL](https://github.com/mysql)**
 -   **[Sequelize](https://github.com/sequelize/sequelize)**
