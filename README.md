@@ -40,7 +40,7 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## Endpoint para o cadastro de produtos
 
-- O endpoint acessível através do caminho (`/products`);
+- O endpoint acessível através do caminho POST(`/products`);
 
 - O endpoint deve receber a seguinte estrutura:
 ```json
@@ -53,23 +53,23 @@ As seguintes ferramentas foram usadas na construção do projeto:
 
 ## Endpoint para a listagem de produtos
 
-- O endpoint acessível através do caminho (`/products`);
+- O endpoint acessível através do caminho GET(`/products`);
 
-    ```json
-    [
-      {
-        "id": 1,
-        "name": "Poção de cura",
-        "amount": "20 gold",
-        "orderId": null
-      },
-      {
-        "id": 2,
-        "name": "Escudo do Herói",
-        "amount": "100 diamond",
-        "orderId": 1
-      }
-    ]
-    ```
-</details>
+Retorna todos os produtos cadastrados
+
+---
+
+## Endpoint para o cadastro de pessoas usuárias
+
+- O endpoint acessível através do caminho POST(`/users`);
+
+- O endpoint deve receber a seguinte estrutura:
+```json
+{ 
+  "username": "MAX",
+  "classe": "swordsman",
+  "level": 10,
+  "password": "SavingPeople"
+}
+```
 
