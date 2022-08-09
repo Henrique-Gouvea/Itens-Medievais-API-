@@ -91,4 +91,14 @@ Retorna todos os produtos cadastrados
     "password": "string"
   }
 ```
+---
+## Endpoint para o cadastro de um pedido
+
+- O endpoint deve ser acessível através do caminho POST(`/orders`);
+
+- O endpoint deve receber a seguinte estrutura:
+```json
+  {
+    "productsIds": [1, 2]
+  }
 
