@@ -38,3 +38,14 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   **[Nodemon](https://github.com/remy/nodemon)**
 
 
+## Endpoint para o cadastro de produtos
+
+- O endpoint acessível através do caminho (`/products`);
+
+- O endpoint deve receber a seguinte estrutura:
+```json
+  {
+    "name": "Espada longa",
+    "amount": "30 peças de ouro"
+  }
+```
