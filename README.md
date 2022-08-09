@@ -49,3 +49,27 @@ As seguintes ferramentas foram usadas na construção do projeto:
     "amount": "30 peças de ouro"
   }
 ```
+---
+
+## Endpoint para a listagem de produtos
+
+- O endpoint acessível através do caminho (`/products`);
+
+    ```json
+    [
+      {
+        "id": 1,
+        "name": "Poção de cura",
+        "amount": "20 gold",
+        "orderId": null
+      },
+      {
+        "id": 2,
+        "name": "Escudo do Herói",
+        "amount": "100 diamond",
+        "orderId": 1
+      }
+    ]
+    ```
+</details>
+
