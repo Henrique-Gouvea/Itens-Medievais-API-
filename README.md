@@ -24,9 +24,11 @@ Criar um arquivo .env na raiz do projeto(passar as variaveis de ambiente especif
 
 Executar o comando npm run dev
 
-# A aplicação será aberta na porta:3000 - acesse http://localhost:3000
+A aplicação será aberta na porta:3000 - acesse http://localhost:3000
 
 ```
+
+---
 
 ## 🛠 Tecnologias
 
@@ -40,4 +42,4 @@ As seguintes ferramentas foram usadas na construção do projeto:
 -   **[JSON-WebToken](https://github.com/auth0/node-jsonwebtoken)**
 -   **[Nodemon](https://github.com/remy/nodemon)**
 
-> Veja o arquivo  [package.json](https://github.com/Henrique-Gouvea/Login-and-Registration---back-end-integration-/tree/main/front/package.json)
+
