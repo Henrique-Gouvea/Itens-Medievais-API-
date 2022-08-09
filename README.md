@@ -72,4 +72,23 @@ Retorna todos os produtos cadastrados
   "password": "SavingPeople"
 }
 ```
+---
+## Endpoint para listar todos os pedidos
+
+- O endpoint acessível através do caminho GET(`/orders`).
+- Essa rota retorna todos os pedidos e os `id`s dos produtos associados a estes.
+---
+## Endpoint para o login de pessoas usuárias
+
+- O endpoint acessível através do caminho POST(`/login`).
+
+- A rota deve receber os campos `username` e `password`.
+
+- O endpoint recebe a seguinte estrutura:
+```json
+  {
+    "username": "string",
+    "password": "string"
+  }
+```
 
