@@ -1,5 +1,5 @@
 export interface IOrder {
-  id: number;
-  userId: number;
+  id?: number;
+  userId?: number;
   productsId?: number[];
 }

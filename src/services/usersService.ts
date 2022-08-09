@@ -9,7 +9,7 @@ async function create(user: IUser) {
   cadastrerUserValidation(user);
   const data = await userModel.create(user);
   const token = tokenHelper.createToken(data);
-
+  
   return { status: 201, token };
 }
 

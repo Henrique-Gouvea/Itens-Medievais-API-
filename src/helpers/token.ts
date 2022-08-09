@@ -15,6 +15,21 @@ function createToken(newUser: IUser | ILogin) {
   return token;
 }
 
+function checkToken(token: string):number {
+  try {
+    const { data: { id } } = jwt.verify(token, SECRET);
+    const { id } = jwt.decode(token as string) as { id: number };
+    console.log(id);
+    
+    return id;
+  } catch (error) {
+    const e = new Error('Invalid token');
+    e.name = 'Unauthorized';
+    throw e;
+  }
+}
+
 export default {
   createToken,
+  checkToken,
 };
